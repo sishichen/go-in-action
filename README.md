@@ -78,7 +78,7 @@ https://github.com/enocom/gopher-reading-list#web
 
 ### Concurrency
 
-- [Data races in Go(Golang) and how to fix them ](https://www.sohamkamani.com/blog/2018/02/18/golang-data-race-and-how-to-fix-it/)
+[x] - [Data races in Go(Golang) and how to fix them ](https://www.sohamkamani.com/blog/2018/02/18/golang-data-race-and-how-to-fix-it/)
 - [Multithreading in Go - A Tutorial](https://pragmacoders.com/multithreading-go-tutorial/)
 
 ## Intermediate
