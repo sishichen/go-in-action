@@ -7,7 +7,7 @@ import (
 
 func main() {
 	// 0. data race
-	// fmt.Println(getNumber())
+	fmt.Println(getNumber())
 
 	// 1. use waitGroup
 	// fmt.Println(getNumberWithSync())
@@ -16,14 +16,14 @@ func main() {
 	// fmt.Println(getNumberWithChan());
 
 	// 3. use return chan
-	i := <-getNumberWithReturnChan()
-	fmt.Println(i)
+	// i := <-getNumberWithReturnChan()
+	// fmt.Println(i)
 
 	// 3.1 return chan with mutiple int
 	// fmt.Println(getNumberWithReturnChan())
-	for v := range getNumberWithReturnChan() {
-		fmt.Println(v)
-	}
+	// for v := range getNumberWithReturnChan() {
+	// 	fmt.Println(v)
+	// }
 
 	// --- with mutex
 	// fmt.Println(getNumberWithMutex())
@@ -96,13 +96,15 @@ func getNumberWithReturnChan() <-chan int {
 	return c
 }
 
-// First, create a struct that contains the value we want to return
-// along with a mutex instance
+// SafeNumber struct
+// val Value int
+// m   mutex Mutex
 type SafeNumber struct {
 	val int
 	m   sync.Mutex
 }
 
+// Get method
 func (i *SafeNumber) Get() int {
 	// The `Lock` method of the mutex blocks if it is already locked
 	// if not, then it blocks other calls until the `Unlock` method is called
@@ -113,6 +115,7 @@ func (i *SafeNumber) Get() int {
 	return i.val
 }
 
+// Set method
 func (i *SafeNumber) Set(val int) {
 	// Similar to the `Get` method, except we Lock until we are done
 	// writing to `i.val`
@@ -124,7 +127,6 @@ func (i *SafeNumber) Set(val int) {
 func getNumberWithMutex() int {
 	// Create an instance of `SafeNumber`
 	i := &SafeNumber{}
-	// done:= make()
 	// Use `Set` and `Get` instead of regular assignments and reads
 	// We can now be sure that we can read only if the write has completed, or vice versa
 	go func() {
