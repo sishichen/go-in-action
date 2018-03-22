@@ -1,7 +1,63 @@
 # Error Handling
 
+## How do other languages do?
+#### Java
+```java
+try {
+   // happy flow
+} catch(Exception e) {
+   // error handling
+}
+```
+#### Swift
+```swift
+// Option 1
+do {
+  // happy flow
+} catch (let error as NSError) {
+  // error handling
+}
+
+// Option 2: assign to an optional variable
+let response = try? ETPhoneHome("Halp!")
+
+// Option 3: crash the app if an error is thrown
+let response = try! ETPhoneHome("BOOM")
+```
+
+#### C
+```c
+#define CHECK_OR_RETURN(contract, error_status, log_level, message_format, ...) \
+if (!(contract)) { \
+    global_logger.message(log_level, message_format, ##__VA_ARGS__); \
+    return error_status; \
+}
+```
+## And Go?
+The error handling in Go doesn't have the concept like exception and try-catch, instead, you should explicitly return an `error` and handle it.
+
+#### Go
+```go
+err := doSomething()
+if err != nil {
+  // error handling
+}
+// happy flow
+```
+or with multiple reutrn values
+```go
+result, err := doSomething()
+if err != nil {
+  // error handling
+}
+// happy flow
+```
+
+## What's the "error"
+
+
 ## Are there something like try-catch in Go?
-There is a similar approach -- **recover**
+As we said, Go doen't have the same concept, Go programmers should (if need) handle the errors explicitly. But, there is still an alternative approach -- **recover** the **panic**
 https://golang.org/ref/spec#Handling_panics
 
 Don't abuse it. We should only use it when the panic is unexpected in normal flow (e.g., out of memory).
