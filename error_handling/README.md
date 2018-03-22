@@ -54,7 +54,29 @@ if err != nil {
 ```
 
 ## What's the "error"
+The `error` type is an interface with only one method: `Error`
+```go
+type error interface {
+    Error() string
+}
+```
 
+You could make an error by [errors.New](https://golang.org/src/errors/errors.go?s=293:320#L1):
+```go
+func doSomething() error {
+	if condition {
+		return errors.New("error la")
+	}
+	// ...
+}
+```
+
+Also, Go allow you to defind your own error type by implementing the `error` interface:
+```go
+type Error string
+
+func (e Error) Error() string { return string(e) }
+```
 
 ## Are there something like try-catch in Go?
 As we said, Go doen't have the same concept, Go programmers should (if need) handle the errors explicitly. But, there is still an alternative approach -- **recover** the **panic**
@@ -68,5 +90,5 @@ Don't abuse it. We should only use it when the panic is unexpected in normal flo
 - [Go's Error Handling is Elegant](https://davidnix.io/post/error-handling-in-go/)
 - [Effective error handling in Go. - Morsing's blog](https://morsmachine.dk/error-handling)
 - [Error handling patterns in Go](https://mijailovic.net/2017/05/09/error-handling-patterns-in-go/)
-- [Handle HTTP Request Errors in Go @ Alex Pliautau's Blog](http://pliutau.com/handle-http-request-errors-in-go/)
 - [Catching panics in Golang](https://stackoverflow.com/questions/25025467/catching-panics-in-golang)
+- [Handling errors in C with “check-log-return”: why not use a macro?](https://softwareengineering.stackexchange.com/questions/335851/handling-errors-in-c-with-check-log-return-why-not-use-a-macro)
