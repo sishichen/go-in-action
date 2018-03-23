@@ -43,10 +43,10 @@ https://github.com/enocom/gopher-reading-list#web
 - [command center: Less is exponentially more](https://commandcenter.blogspot.com.br/2012/06/less-is-exponentially-more.html)
 - [Go Proverbs](https://go-proverbs.github.io/)
 - [Idiomatic Go](https://dmitri.shuralyov.com/idiomatic-go)
-- [Errors](https://github.com/golang/go/wiki/Errors)
+- ~~[Errors](https://github.com/golang/go/wiki/Errors)~~
 - [When Should I Use One Liner if...else Statements in Go?](https://www.calhoun.io/one-liner-if-statements-with-errors/)
-- [Go's Error Handling is Elegant](https://davidnix.io/post/error-handling-in-go/)
-- [Effective error handling in Go. - Morsing's blog](https://morsmachine.dk/error-handling)
+- ~~[Go's Error Handling is Elegant](https://davidnix.io/post/error-handling-in-go/)~~
+- ~~[Effective error handling in Go. - Morsing's blog](https://morsmachine.dk/error-handling)~~
 - [Alternative Patterns for Method Overloading in Go](https://mymemorysucks.wordpress.com/2017/05/16/alternative-patterns-for-method-overloading-in-go/)
 - [Five Suggestions for Setting up a Go project](https://dave.cheney.net/2014/12/01/five-suggestions-for-setting-up-a-go-project)
 - [Structuring Tests in Go](https://medium.com/@benbjohnson/structuring-tests-in-go-46ddee7a25c)
