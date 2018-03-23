@@ -33,7 +33,7 @@ https://github.com/enocom/gopher-reading-list#web
 ### Worth reading, again and again
 
 - [Effective Go](https://golang.org/doc/effective_go.html)
-- [Visualizing Concurrency in Go](https://divan.github.io/posts/go_concurrency_visualize/)
+- ~~[Visualizing Concurrency in Go](https://divan.github.io/posts/go_concurrency_visualize/)~~
 - [Strings, bytes, runes and characters in Go - The Go Blog](https://blog.golang.org/strings)
 - [Arrays, slices (and strings): The mechanics of 'append' - The Go Blog](https://blog.golang.org/slices)
 
@@ -121,7 +121,8 @@ https://github.com/enocom/gopher-reading-list#web
 - [How to Block Forever in Go](http://blog.sgmansfield.com/2016/06/how-to-block-forever-in-go/)
 - [Mutex Profile](https://rakyll.org/mutexprofile/)
 - [Sane Concurrency with Go | Mozilla Services](https://blog.mozilla.org/services/2014/03/12/sane-concurrency-with-go/)
-- [Goroutine Tracing](https://deferpanic.com/blog/goroutine-tracing/)
+- ~~[Goroutine Tracing](https://deferpanic.com/blog/goroutine-tracing/)~~
+> Recommend to read this: https://making.pusher.com/go-tool-trace/
 - [Error handling patterns in Go](https://mijailovic.net/2017/05/09/error-handling-patterns-in-go/)
 
 ### Testing
