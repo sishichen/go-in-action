@@ -127,7 +127,7 @@ https://github.com/enocom/gopher-reading-list#web
 ### Testing
 
 - [Testing Web Apps in Go | Mark J. Berger](http://markjberger.com/testing-web-apps-in-golang/)
-- [An Introduction to Testing in Go | TutorialEdge.net](https://tutorialedge.net/golang/intro-testing-in-go/)
+- ~~[An Introduction to Testing in Go | TutorialEdge.net](https://tutorialedge.net/golang/intro-testing-in-go/)~~
 - [5 simple tips and tricks for writing unit tests in #golang](https://medium.com/@matryer/5-simple-tips-and-tricks-for-writing-unit-tests-in-golang-619653f90742)
 - [5 Advanced Testing Techniques in Go · Segment Blog](https://segment.com/blog/5-advanced-testing-techniques-in-go/)
 - [The Cult of Go Test](http://danmux.com/posts/the_cult_of_go_test/)
